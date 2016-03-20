@@ -58,8 +58,8 @@ class PlayerGames extends Base\ArrayBase{
     (1)
     )};}
 
-    public function IsPlayerInGame(){
-        foreach($this->server->getOnlinePlayers() as $p){
+    public function IsPlayerInGame($server){
+        foreach($server->getOnlinePlayers() as $p){
         return in_array($p->getName(), $this->pg);
     }}
     

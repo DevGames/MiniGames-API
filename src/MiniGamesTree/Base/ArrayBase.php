@@ -10,6 +10,8 @@ class ArrayBase{
     
         protected $pg = array();
         
+        protected $codeplayer = "code";
+        
         protected $num = array();
         
         protected $status = array();

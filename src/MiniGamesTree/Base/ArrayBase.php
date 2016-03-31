@@ -12,7 +12,9 @@ class ArrayBase{
     
         protected $pg = array();
         
-        protected $codeplayer = "code";
+        protected $won = "false";
+        
+        protected $teamscore = array();
         
         protected $num = array();
         

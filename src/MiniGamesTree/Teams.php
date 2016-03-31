@@ -18,11 +18,11 @@ class Teams extends Base\ArrayBase{
 }
 class teamscore extends Base\ArrayBase{
   
-  public function getScoreTeam(){
-    
+  public function getScoreTeam($teamname){
+  return $this->teamscore[$teamname];
   }
   
-  public function setScoreTeam(){
-    
+  public function setScoreTeam($teamname,$amount){
+  return $this->teamscore[$teamname] = $amount;
   }
 }

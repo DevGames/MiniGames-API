@@ -24,6 +24,12 @@ class Teams extends Base\ArrayBase{
       return ($teams == $player->getName());
     }
   }
+  
+  public function getTeamsPlayer($teamname,$server){
+    foreach($this->worker{$teamname} as $teams){
+      return $server->getPlayer($teams);
+    }
+  }
 }
 class teamscore extends Base\ArrayBase{
   

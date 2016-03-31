@@ -15,6 +15,15 @@ class Teams extends Base\ArrayBase{
   return $this->gts;
   }
   
+  public function isPlayersInGame($player){
+    return (in_array($player->getName(),$this->worker));
+  }
+  
+  public function getTeamInGame($teamname,$player){
+    foreach($this->worker{$teamname} as $teams){
+      return ($teams == $player->getName());
+    }
+  }
 }
 class teamscore extends Base\ArrayBase{
   

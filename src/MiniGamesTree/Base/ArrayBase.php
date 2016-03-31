@@ -4,6 +4,8 @@ namespace MiniGamesTree\Base;
 
 class ArrayBase{
     
+        protected $worker = array();
+    
         protected $speed = 20;
         
         protected $move = "-";

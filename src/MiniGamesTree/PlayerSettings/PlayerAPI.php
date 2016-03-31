@@ -7,11 +7,15 @@ use MiniGamesTree\Status;
 
 use MiniGamesTree\Time;
 
+use MiniGamesTree\Teams;
+
 class PlayerAPI{
     
     private $g;
 
     private $s;
+    
+    private $t;
     
     private $Time;
 
@@ -28,6 +32,11 @@ class PlayerAPI{
     public function getTimeAPI(){
     $this->Time = new Time();
     return $this->Time;
+    }
+    
+    public function getTeamAPI(){
+    $this->t = new Teams();
+    return $this->t;
     }
     
 }

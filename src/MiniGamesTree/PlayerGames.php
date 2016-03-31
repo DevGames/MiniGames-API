@@ -49,7 +49,7 @@ class PlayerGames extends Base\ArrayBase{
         (1)});
     }
     
-    public function isPlayerWithNumber($number){
+    public function isPlayerInGameWithNumber($number){
         return array_key_exists($number - 1, $this->pg);
     }
 
@@ -58,10 +58,9 @@ class PlayerGames extends Base\ArrayBase{
     (1)
     )};}
 
-    public function IsPlayerInGame($server){
-        foreach($server->getOnlinePlayers() as $p){
-        return in_array($p->getName(), $this->pg);
-    }}
+    public function IsPlayerInGame($player){
+        return in_array($player->getName(), $this->pg);
+    }
     
     public function getAllPlayerName($glue = " , "){ // Like /list
         return implode($glue , $this->pg);

@@ -10,6 +10,10 @@ class Teams extends Base\ArrayBase{
   return $this->worker[strtoupper($teamsname)]{$name} = $name;
   }
   
+  public function removePlayerTeam($teamsname,$name){
+  unset($this->worker[strtoupper($teamsname)]{$name});
+  }
+  
   public function getScore(){
   $this->gts = new teamscore();
   return $this->gts;

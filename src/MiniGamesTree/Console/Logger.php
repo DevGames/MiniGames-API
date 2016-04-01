@@ -3,6 +3,7 @@
 namespace MiniGamesTree\Console;
 
 use pocketmine\plugin\PluginBase;
+use MiniGamesTree\Base\ArrayBase;
 
 class Logger extends PluginBase { 
 
@@ -18,7 +19,7 @@ class Logger extends PluginBase {
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run\RT($this), $this->base->speed);
         $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.self::Name . " IS Worked");
 		if(!self::$get instanceof \MiniGamesTree\PlayerSettings\PlayerAPI){
-			self::$get = $this;
+			ArrayBase::$get = $this;
 		}
     }
 }

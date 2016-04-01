@@ -6,7 +6,7 @@ class ArrayBase{
     
         public $worker = array();
         
-        private static $get = null;
+        public static $get = null;
     
         public $speed = 20;
         

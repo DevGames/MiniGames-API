@@ -4,25 +4,25 @@ namespace MiniGamesTree\Base;
 
 class ArrayBase{
     
-        protected $worker = array();
+        public $worker = array();
     
-        protected $speed = 20;
+        public $speed = 20;
         
-        protected $move = "-";
+        public $move = "-";
     
-        protected $pg = array();
+        public $pg = array();
         
-        protected $won = "false";
+        public $won = "false";
         
-        protected $teamscore = array();
+        public $teamscore = array();
         
-        protected $num = array();
+        public $num = array();
         
-        protected $status = array();
+        public $status = array();
         
-        protected $Time = 0;
+        public $Time = 0;
         
-        protected $score = array();
+        public $score = array();
         
-        protected $number = 0;
+        public $number = 0;
 }

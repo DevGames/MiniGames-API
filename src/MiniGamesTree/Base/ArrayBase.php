@@ -25,4 +25,5 @@ class ArrayBase{
         public $score = array();
         
         public $number = 0;
+        //0-0
 }

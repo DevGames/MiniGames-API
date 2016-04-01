@@ -1,12 +1,12 @@
 <?php
-namespace MiniGamesTree;
 
+namespace MiniGamesTree;
 
 class PlayerGames extends Base\ArrayBase{
     
         private $gscore;
     
-        public function add($number,$player){
+        public function addPlayerInGame($number,$player){
             
         $this->number++;
         
@@ -21,7 +21,7 @@ class PlayerGames extends Base\ArrayBase{
         $player->getName();
     }
     
-    public function remove($server,$number){
+    public function removePlayerInGame($server,$number){
         
         $this->number--;
         

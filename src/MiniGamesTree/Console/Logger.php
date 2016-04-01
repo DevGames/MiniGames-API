@@ -17,7 +17,9 @@ class Logger extends PluginBase {
         $this->Time = $this->base->Time;
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run\RT($this), $this->base->speed);
         $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.self::Name . " IS Worked");
-        
+		if(!self::$get instanceof \MiniGamesTree\PlayerSettings\PlayerAPI){
+			self::$get = $this;
+		}
     }
 }
 ?>

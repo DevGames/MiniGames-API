@@ -35,9 +35,18 @@ class PlayerGames extends Base\ArrayBase{
     }
     
     public function RemoveAllPlayers($server){
+    $this->number = 0;
     foreach($server->getOnlinePlayers() as $player):
+    unset($this->score[$player->getName()]);
+    unset($this->num[$player->getName()]);
     unset($this->pg[$this->getNumber($player)]);
     endforeach();
+    }
+    
+    public function getAllPlayersInGame($server){
+        foreach($this->pg as $p){
+            return $server->getPlayer($p);
+        }
     }
     
     public function getPlayerCount(){

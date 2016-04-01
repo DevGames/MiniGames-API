@@ -45,7 +45,7 @@ class PlayerGames extends Base\ArrayBase{
     
     public function getAllPlayersInGame($server){
         foreach($this->pg as $p){
-            return $server->getPlayer($p);
+        return $server->getPlayer($p);
         }
     }
     

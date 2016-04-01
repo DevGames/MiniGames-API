@@ -5,6 +5,8 @@ namespace MiniGamesTree\Base;
 class ArrayBase{
     
         public $worker = array();
+        
+        private static $get = null;
     
         public $speed = 20;
         

@@ -9,7 +9,7 @@ use MiniGamesTree\Time;
 
 use MiniGamesTree\Teams;
 
-class PlayerAPI{
+class PlayerAPI extends Base\ArrayBase{
     
     private $g;
 
@@ -37,6 +37,10 @@ class PlayerAPI{
     public function getTeamAPI(){
     $this->t = new Teams();
     return $this->t;
+    }
+    
+    public static function getInstance(){
+    return self::$get;
     }
     
 }

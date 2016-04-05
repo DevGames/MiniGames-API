@@ -2,7 +2,7 @@
 
 namespace MiniGamesTree/Info;
 
-class info extends Base\ArrayBase{
+class info {
 
   private $info = array("DevName" <= "Nawaf_Craft1b",
                          "PluginAPIName" <= "MiniGames-API"
@@ -11,7 +11,15 @@ class info extends Base\ArrayBase{
 
 
     public function getHelper(){
-
+    return $this->info{"Helper"};
     }
    
-    
+
+    public function getDevelepor(){
+    return $this->info["DevName"];
+    }
+
+    public function getAPIName(){
+    return $this->info["PluginAPIName"];
+    }
+  }

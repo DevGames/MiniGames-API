@@ -6,7 +6,7 @@ class PlayerGames extends Base\ArrayBase{
     
         private $gscore;
     
-        public function addPlayerInGame($number,$player){
+        public function addInGame($number,$player){
             
         $this->number++;
         
@@ -21,7 +21,7 @@ class PlayerGames extends Base\ArrayBase{
         $player->getName();
     }
     
-    public function removePlayerInGame($server,$number){
+    public function removePlayer($server,$number){
         
         $this->number--;
         

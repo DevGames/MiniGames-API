@@ -6,8 +6,15 @@ class Teams extends Base\ArrayBase{
   
   public $gts;
   
+  private $arrayt = array("getTeam");
+  
   public function addToTeam($teamsname,$name){
+  $this->arrayt["getTeam"][$name] = $teamsname;
   return $this->worker[strtoupper($teamsname)]{$name} = $name;
+  }
+  
+  public function getTeam($name){
+  return $this->arrayt["getTeam"][$name];
   }
   
   public function removePlayerTeam($teamsname,$name){

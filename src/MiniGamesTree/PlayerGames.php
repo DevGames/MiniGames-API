@@ -60,9 +60,10 @@ class PlayerGames extends Base\ArrayBase{
     }
     
     public function getPlayerWithNumber($server,$number){
-        return $server->getPlayer($this->pg{
-       $number - 
-        (1)});
+        return $server->getPlayer($this->pg
+    {
+       $number
+        });
     }
     
     public function isPlayerInGameWithNumber($number){
@@ -70,9 +71,8 @@ class PlayerGames extends Base\ArrayBase{
     }
 
     public function getName($number){
-    return $this->pg{$number -
-    (1)
-    )};}
+    return $this->pg{$number
+    };}
 
     public function IsPlayerInGame($player){
         return in_array($player->getName(), $this->pg);

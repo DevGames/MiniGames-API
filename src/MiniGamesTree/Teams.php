@@ -13,7 +13,7 @@ class Teams extends Base\ArrayBase{
   return $this->worker[strtoupper($teamsname)]{$name} = $name;
   }
   
-  public function getTeam($name){
+  public function getPlayerTeam($name){
   return $this->arrayt["getTeam"][$name];
   }
   

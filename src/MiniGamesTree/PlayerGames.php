@@ -21,7 +21,7 @@ class PlayerGames extends Base\ArrayBase{
         $player->getName();
     }
     
-    public function removePlayer($server,$number){
+    public function remove($server,$number){
         
         $this->number--;
         
@@ -34,7 +34,7 @@ class PlayerGames extends Base\ArrayBase{
                        });
     }
     
-    public function RemoveAllPlayers($server){
+    public function RemoveAll($server){
     $this->number = 0;
     foreach($server->getOnlinePlayers() as $player):
     unset($this->score[$player->getName()]);
@@ -87,7 +87,7 @@ class PlayerGames extends Base\ArrayBase{
     }
    * 
    */
-   public function getLastPlayerNumber(){
+   public function getLastNumber(){
    return $this->number;
    }
    

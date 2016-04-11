@@ -23,7 +23,7 @@ class PlayerGames extends Base\ArrayBase{
     
     public function remove($server,$number){
         
-        $this->number--;
+        $this->number = $this->getPlayerCount();
         
         unset($this->score[$this->getPlayerWithNumber($server,$number)->getName()]);
         

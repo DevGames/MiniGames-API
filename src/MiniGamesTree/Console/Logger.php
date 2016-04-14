@@ -19,7 +19,7 @@ class Logger extends PluginBase {
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run\RT($this), $this->base->speed);
         $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.self::Name . " IS Worked");
 		if(!ArrayBase::$get instanceof \MiniGamesTree\PlayerSettings\PlayerAPI){
-			ArrayBase::$get = $this;
+			ArrayBase::$get = new \MiniGamesTree\PlayerSettings\PlayerAPI();
 		}
     }
 }

@@ -6,7 +6,7 @@ class Status extends Base\ArrayBase{
     
     const Mode1 = "Stop";
     
-    const Mode2 = "Witing";
+    const Mode2 = "Waiting";
     
     const Mode3 = "Start";
     

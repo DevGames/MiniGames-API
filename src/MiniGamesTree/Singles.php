@@ -38,4 +38,8 @@ class Singles {
         return $this->game{"Num"}[$name];
     }
     
+    public function getScore(){
+        return new Score\PlayerScore(); 
+    }
+    
 }

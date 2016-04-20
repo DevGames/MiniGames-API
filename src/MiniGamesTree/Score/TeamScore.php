@@ -6,12 +6,16 @@ class TeamScore{
     
     public $score = array();
     
-    public function addScore($toteam,$amount){
-        $this->score[strtolower($toteam)] = $amount;
+    public function addScore($teamname,$amount){
+        $this->score[strtolower($teamname)] = $amount;
     }
     
-    public function getScore($toteam){
-        return $this->score[strtolower($toteam)];
+    public function getScore($teamname){
+        return $this->score[strtolower($teamname)];
+    }
+    
+    public function DisableScore($teamname){
+       unset($this->score[$teamname]);
     }
 
 }

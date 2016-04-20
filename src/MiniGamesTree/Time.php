@@ -47,6 +47,10 @@ class Time extends \pocketmine\plugin\PluginBase {
 
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
       
+      $api = new \MiniGamesTree\API\game;
+      
+      $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.$api->getInfo()->getAPIName()."IS Worked".PHP_EOL."Version : ".$api->getInfo()->getVersion());
+      
       $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run ( $this ), self::$speed);
       
   }

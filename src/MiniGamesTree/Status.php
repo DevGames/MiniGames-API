@@ -19,8 +19,8 @@ class Status {
     }
     
     public function MakeStep($strings){
-        $this->status["Last"] = strtolower($strings);
-        return $this->status{"Step"} = strtolower($strings);
+        $this->status["Last"] = $strings;
+        return $this->status{"Step"} = $strings;
     }
     
     public function getStep(){

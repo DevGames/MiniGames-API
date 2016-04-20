@@ -8,6 +8,14 @@ class game extends \MiniGamesTree\extendss\info{
     return $this;
     }
     
+    public function getTime(){
+    return new \MiniGamesTree\Time();
+    }
+    
+    public function getMode(){
+    return new \MiniGamesTree\Status();
+    }
+    
     public function getGame(){
     return new GameAPI();
     }

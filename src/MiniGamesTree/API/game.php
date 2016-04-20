@@ -18,7 +18,7 @@ class GameAPI {
     // private $use = array();
 
     public function getTeam(){ # Like CTF
-       
+    return new \MiniGamesTree\Team();
     }
     
     public function getSingles(){ # Like SG

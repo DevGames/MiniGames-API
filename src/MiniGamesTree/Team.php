@@ -18,6 +18,7 @@ class Team {
   public function RemoveTo($teamname,$name){
    unset($this->teams["getTeam"][$name]);
    unset($this->teams[array_search($name, $this->teams[strtolower($teamname]))]);
+   unset($this->getScore()->score[$teamname]);
   }
   
   public function getCount($teamname){
@@ -35,7 +36,7 @@ class Team {
     }
     
     public function getScore(){
-      $a = new new \MiniGamesTree\Score\TeamScore();
+      $a = new Score\TeamScore();
       return $a;
     }
     

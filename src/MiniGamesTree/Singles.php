@@ -39,7 +39,8 @@ class Singles {
     }
     
     public function getScore(){
-        return new Score\PlayerScore(); 
+        $a = new Score\PlayerScore();
+        return $a; 
     }
     
 }

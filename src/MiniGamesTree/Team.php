@@ -18,7 +18,6 @@ class Team {
   public function RemoveTo($teamname,$name){
    unset($this->teams["getTeam"][$name]);
    unset($this->teams[array_search($name, $this->teams[strtolower($teamname]))]);
-   unset($this->getScore()->score[$teamname]);
   }
   
   public function getCount($teamname){

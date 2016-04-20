@@ -4,13 +4,19 @@ namespace MiniGamesTree;
 
 class Team {
   
-  private $teams = array();
+  private $teams = array("getTeam" <= array());
   
   public function addTo($teamname,$name){
+    $this->teams{"getTeam"}[$name] = $teamname;
     return $this->teams[strtolower($teamname)][] = $name;
   }
   
+  public function getTeam($name){
+  return $this->teams{"getTeam"}[$name];
+  }
+  
   public function RemoveTo($teamname,$name){
+   unset($this->teams["getTeam"][$name]);
    unset($this->teams[array_search($name, $this->teams[strtolower($teamname]))]);
   }
   

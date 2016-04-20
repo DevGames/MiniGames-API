@@ -20,7 +20,7 @@ class Singles {
         return in_array($name, $this->game["Game"]);
     }
     
-    public function getPlayers($server){
+    public function getPlayers(\pocketmine\Server $server){
     foreach ($this->game["Game"] as $p):
     return $server->getPlayer($p);
     endforeach;

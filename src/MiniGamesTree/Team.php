@@ -28,13 +28,18 @@ class Team {
         return in_array($name, $this->teams[strtolower($teamname)]);
     }
     
-    public function getPlayersInTeam(\pocketmine\Server $server,$teamname){
+    public function getPlayers(\pocketmine\Server $server,$teamname){
     foreach ($this->teams[strtolower($teamname)] as $p):
     return $server->getPlayer($p);
     endforeach;
     }
     
-    public function listPlayerTeams($teamname,$glue = " .*. "){
+    public function getScore(){
+      $a = new new \MiniGamesTree\Score\TeamScore();
+      return $a;
+    }
+    
+    public function listPlayers($teamname,$glue = " .*. "){
         return implode($glue, $this->teams[strtolower($teamname)]);
     }
   

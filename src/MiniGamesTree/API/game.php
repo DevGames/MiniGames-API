@@ -8,16 +8,19 @@ class game extends \MiniGamesTree\extendss\info{
     return $this;
     }
     
-    public function getTime(){
-    return new \MiniGamesTree\Time();
+    public static function getTime(){
+    $a = new \MiniGamesTree\Time();
+    return $a;
     }
     
-    public function getMode(){
-    return new \MiniGamesTree\Status();
+    public static function getMode(){
+    $a = new \MiniGamesTree\Status();
+    return $a;
     }
     
-    public function getGame(){
-    return new GameAPI();
+    public static function getGame(){
+    $a = new GameAPI();
+    return $a;
     }
     
 }
@@ -26,11 +29,13 @@ class GameAPI {
     // private $use = array();
 
     public function getTeam(){ # Like CTF
-    return new \MiniGamesTree\Team();
+    $a = new \MiniGamesTree\Team();
+    return $a;
     }
     
     public function getSingles(){ # Like SG
-    return new \MiniGamesTree\Singles();
+    $a = new \MiniGamesTree\Singles();
+    return $a;
     }
     
 }

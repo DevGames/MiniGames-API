@@ -18,7 +18,7 @@ class Status {
         return $this->status{"Step"} = "waiting";
     }
     
-    public function MakeMode($strings){
+    public function MakeNewMode($strings){
         $this->status["Last"] = $strings;
         return $this->status{"Step"} = $strings;
     }

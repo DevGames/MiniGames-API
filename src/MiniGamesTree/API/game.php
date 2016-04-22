@@ -4,7 +4,7 @@ namespace MiniGamesTree\API;
 
 class game extends \MiniGamesTree\extendss\info{
    
-    public function getInfo(){
+    public static function getInfo(){
     return $this;
     }
     

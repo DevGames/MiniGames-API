@@ -33,8 +33,8 @@ class GameAPI {
     return $a;
     }
     
-    public function getSingles(){ # Like SG
-    $a = new \MiniGamesTree\Singles();
+    public function getSingles($name_player){ # Like SG
+    $a = new \MiniGamesTree\Singles($name_player);
     return $a;
     }
     

@@ -6,30 +6,37 @@ class Team {
   
   private $teams = array("getTeam" <= array());
   
-  public function addTo($teamname,$name){
-    $this->teams{"getTeam"}[$name] = $teamname;
-    return $this->teams[strtolower($teamname)][] = $name;
+  private $usn;
+  private $ust;
+   public function __construct($ust,$usn){
+		$this->usn = $usn;
+		$this->ust = $ust;
+	 }
+  
+  public function addTo(){
+    $this->teams{"getTeam"}[$name] = $this->ust;
+    return $this->teams[strtolower($this->ust)][] = $name;
   }
   
-  public function getTeam($name){
-  return $this->teams{"getTeam"}[$name];
+  public function getTeam(){
+  return $this->teams{"getTeam"}[$this->usn];
   }
   
-  public function RemoveTo($teamname,$name){
-   unset($this->teams["getTeam"][$name]);
-   unset($this->teams[array_search($name, $this->teams[strtolower($teamname]))]);
+  public function RemoveTo(){
+   unset($this->teams["getTeam"][$this->usn]);
+   unset($this->teams[array_search($this->usn, $this->teams[strtolower($this->ust]))]);
   }
   
-  public function getCount($teamname){
-    return count($this->teams[strtolower($teamname)]);
+  public function getCount(){
+    return count($this->teams[strtolower($this->ust)]);
   }
   
-  public function isInTeam($teamname,$name){
-        return in_array($name, $this->teams[strtolower($teamname)]);
+  public function isInTeam(){
+        return in_array($this->usn, $this->teams[strtolower($this->ust)]);
     }
     
-    public function getPlayers(\pocketmine\Server $server,$teamname){
-    foreach ($this->teams[strtolower($teamname)] as $p):
+    public function getPlayers(\pocketmine\Server $server){
+    foreach ($this->teams[strtolower($this->ust)] as $p):
     return $server->getPlayer($p);
     endforeach;
     }
@@ -40,7 +47,7 @@ class Team {
     }
     
     public function listPlayers($teamname,$glue = " .*. "){
-        return implode($glue, $this->teams[strtolower($teamname)]);
+        return implode($glue, $this->teams[strtolower($this->ust)]);
     }
   
 }

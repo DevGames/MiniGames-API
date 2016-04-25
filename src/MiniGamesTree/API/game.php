@@ -28,8 +28,8 @@ class GameAPI {
     
     // private $use = array();
 
-    public function getTeam(){ # Like CTF
-    $a = new \MiniGamesTree\Team();
+    public function getTeam($teamname,$name_player){ # Like CTF
+    $a = new \MiniGamesTree\Team($teamname,$name_player);
     return $a;
     }
     

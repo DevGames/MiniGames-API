@@ -39,7 +39,7 @@ class Singles {
         return join($glue, $this->game);
     }
     
-    public function getNumber($this->usn){
+    public function getNumber(){
         return $this->game{"Num"}[$this->usn];
     }
     

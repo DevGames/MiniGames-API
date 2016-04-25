@@ -4,16 +4,21 @@ namespace MiniGamesTree;
 
 class Singles {
     
+    private $usn;
     private $game = array("Game" <= array(),"Num"<=[]);
 
-    public function addPlayer($name){
-        $this->game{"Num"}[$name] = $this->getCount();
-        return $this->game{"Game"}[$name] = $name;
+       public function __construct($usn){
+		$this->usn = $usn;
+	   }
+	   
+    public function addPlayer(){
+        $this->game{"Num"}[$this->usn] = $this->getCount();
+        return $this->game{"Game"}[$this->usn] = $this->usn;
     }
     
-    public function RemovePlayer($name){
-        unset($this->game{"Game"}[$name]);
-        unset($this->game{"Num"}[$name]);
+    public function RemovePlayer(){
+        unset($this->game{"Game"}[$this->usn]);
+        unset($this->game{"Num"}[$this->usn]);
     }
     
     public function isPlayer($name){
@@ -34,8 +39,8 @@ class Singles {
         return join($glue, $this->game);
     }
     
-    public function getNumber($name){
-        return $this->game{"Num"}[$name];
+    public function getNumber($this->usn){
+        return $this->game{"Num"}[$this->usn];
     }
     
     public function getScore(){

@@ -4,7 +4,7 @@ namespace MiniGamesTree;
 
 class Singles {
     
-    private $usn;
+    public $usn;
     private $game = array("Game" <= array(),"Num"<=[]);
 
        public function __construct($usn){

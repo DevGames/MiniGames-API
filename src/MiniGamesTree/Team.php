@@ -8,31 +8,31 @@ class Team {
   
   private $usn;
   private $ust;
-   public function __construct($ust,$usn){
-		$this->usn = $usn;
-		$this->ust = $ust;
+        public function __construct($ust,$usn){
+	$this->usn = $usn;
+	$this->ust = $ust;
 	 }
   
-  public function addTo(){
+     public function addTo(){
     $this->teams{"getTeam"}[$name] = $this->ust;
     return $this->teams[strtolower($this->ust)][] = $name;
-  }
+     }
   
-  public function getTeam(){
+     public function getTeam(){
   return $this->teams{"getTeam"}[$this->usn];
-  }
+     }
   
-  public function RemoveTo(){
+     public function RemoveTo(){
    unset($this->teams["getTeam"][$this->usn]);
    unset($this->teams[array_search($this->usn, $this->teams[strtolower($this->ust]))]);
-  }
+     }
   
-  public function getCount(){
+     public function getCount(){
     return count($this->teams[strtolower($this->ust)]);
-  }
+     }
   
-  public function isInTeam(){
-        return in_array($this->usn, $this->teams[strtolower($this->ust)]);
+    public function isInTeam(){
+    return in_array($this->usn, $this->teams[strtolower($this->ust)]);
     }
     
     public function getPlayers(\pocketmine\Server $server){
@@ -46,7 +46,7 @@ class Team {
       return $a;
     }
     
-    public function listPlayers($teamname,$glue = " .*. "){
+    public function listPlayers($glue = " .*. "){
         return implode($glue, $this->teams[strtolower($this->ust)]);
     }
   

@@ -9,7 +9,7 @@ class PlayerScore extends \MiniGamesTree\Singles{
     public $eror = "";
 
     public function setScore($amount){
-        if($this->isPlayer($this->usn)){
+        if($this->is($this->usn)){
             $this->score[$this->usn] = $amount;
         }else{
             unset($this->score{$this->usn});
@@ -20,7 +20,7 @@ class PlayerScore extends \MiniGamesTree\Singles{
     }
     
     public function getScore(){
-        if($this->isPlayer($this->usn)){
+        if($this->is($this->usn)){
             $this->score[$this->usn];
         }else{
             $output = $this->usn." IS Not In Game , Canot get Score";

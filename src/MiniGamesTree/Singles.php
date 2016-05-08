@@ -11,17 +11,17 @@ class Singles {
 		$this->usn = $usn;
 	   }
 	   
-    public function addPlayer(){
+    public function add(){
         $this->game{"Num"}[$this->usn] = $this->getCount();
         return $this->game{"Game"}[$this->usn] = $this->usn;
     }
     
-    public function RemovePlayer(){
+    public function remove(){
         unset($this->game{"Game"}[$this->usn]);
         unset($this->game{"Num"}[$this->usn]);
     }
     
-    public function isPlayer($name){
+    public function inGame($name){
         return in_array($name, $this->game["Game"]);
     }
     

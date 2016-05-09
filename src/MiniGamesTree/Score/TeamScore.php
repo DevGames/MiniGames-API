@@ -2,7 +2,7 @@
 
 namespace MiniGamesTree\Score;
 
-class TeamScore extends Team{
+class TeamScore extends \MiniGamesTree\Team{
     
     public $score = array();
     

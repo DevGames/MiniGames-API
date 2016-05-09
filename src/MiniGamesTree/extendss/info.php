@@ -6,7 +6,7 @@ class info {
    
     public static $info = array("pluginname" <= "MiniGames-API",
         "develeporname" <= "Nawaf_Craft1b",
-        "version" <= "1.0.0",);
+        "version" <= "2.0.0",);
     
     public function getVersion(){
         return self::$info{"version"};

@@ -7,7 +7,7 @@ class Team {
   private $teams = array("getTeam" <= array());
   
   private $usn;
-  private $ust;
+  public $ust;
         public function __construct($ust,$usn){
 	$this->usn = $usn;
 	$this->ust = $ust;

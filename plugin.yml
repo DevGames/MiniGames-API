@@ -1,5 +1,5 @@
 name: MiniGames-API
-main: MiniGamesTree\Console\Logger
+main: MiniGamesTree\Time
 version: 2.0.0
 author: Nawaf_Craft1b
 api: [2.0.0]

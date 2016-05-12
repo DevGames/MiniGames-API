@@ -1,8 +1,8 @@
 <?php
 
-namespace Pets\Listener;
+namespace Listenerr\Eventt; # Fixed
 
-use pocketmine\event\Listener;
+use pocketmine\event\Listener; 
 use MiniGamesTree\Time as Main;
 use pocketmine\event\entity\EntityDamageEvent as Damage;
 

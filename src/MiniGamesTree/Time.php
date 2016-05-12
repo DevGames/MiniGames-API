@@ -6,6 +6,8 @@ use pocketmine\scheduler\PluginTask;
 
 class Time extends \pocketmine\plugin\PluginBase {
   
+  public $api;
+  
   private $Time = 0;
   
   private static $speed = 20;
@@ -48,8 +50,8 @@ class Time extends \pocketmine\plugin\PluginBase {
       $this->getServer()->getPluginManager()->registerEvents($this, $this);
       
       $api = new \MiniGamesTree\API\game;
-      
-      $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.$api->getInfo()->getAPIName()."IS Worked".PHP_EOL."Version : ".$api->getInfo()->getVersion());
+      $this->api = $api;
+      $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.$api->getInfo()->getName()." IS Worked".PHP_EOL."Version : ".$api->getInfo()->getVersion());
       
       $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run ( $this ), self::$speed);
       

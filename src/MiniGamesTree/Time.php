@@ -6,7 +6,7 @@ use pocketmine\scheduler\PluginTask;
 
 class Time extends \pocketmine\plugin\PluginBase {
   
-  public $api;
+  private $api;
   
   private $Time = 0;
   
@@ -47,7 +47,7 @@ class Time extends \pocketmine\plugin\PluginBase {
   
     public function onEnable() {
 
-      $this->getServer()->getPluginManager()->registerEvents(new MiniGamesTree\Listnerr\Eventt($this), $this);
+      //$this->getServer()->getPluginManager()->registerEvents(new MiniGamesTree\Listnerr\Eventt($this), $this);
       
       $api = new \MiniGamesTree\API\game;
       $this->api = $api;

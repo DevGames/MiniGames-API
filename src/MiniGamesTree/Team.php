@@ -5,7 +5,7 @@ namespace MiniGamesTree;
 class Team {
   
   private $teams = array("getTeam" <= array());
-  
+  private $get = array();
   private $usn;
   public $ust;
   public function __construct($ust,$usn){
@@ -13,17 +13,17 @@ class Team {
   $this->ust = $ust;
      }
   
-  public function addTo(){
-  $this->teams{"getTeam"}[$name] = $this->ust;
+  public function add(){
+  $this->get{$name} = $this->ust;
   return $this->teams[strtolower($this->ust)][] = $name;
      }
   
-  public function getTeam(){
-  return $this->teams{"getTeam"}[$this->usn];
+  public function getPlayerTeam(){
+  return $this->get{$this->usn};
      }
   
-  public function RemoveTo(){
-  unset($this->teams["getTeam"][$this->usn]);
+  public function remove(){
+  unset($this->get[$this->usn]);
   unset($this->teams[array_search($this->usn, $this->teams[strtolower($this->ust]))]);
      }
   

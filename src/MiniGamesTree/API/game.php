@@ -8,16 +8,6 @@ class game extends \MiniGamesTree\extendss\info{
     return $this;
     }
     
-    public static function getTime(){
-    $a = new \MiniGamesTree\Time();
-    return $a;
-    }
-    
-    public static function getMode(){
-    $a = new \MiniGamesTree\Status();
-    return $a;
-    }
-    
     public static function getGame(){
     $a = new GameAPI();
     return $a;
@@ -33,9 +23,38 @@ class GameAPI {
     return $a;
     }
     
+    public static function getTime(){
+    $a = new \MiniGamesTree\Time();
+    return $a;
+    }
+    
+    public static function getMode(){
+    $a = new \MiniGamesTree\Status();
+    return $a;
+    }
+    
     public function getSingles($name_player){ # Like SG
     $a = new \MiniGamesTree\Singles($name_player);
     return $a;
     }
     
+    public function getEvent($nameofevent){
+    if($nameofevent == "Team"){
+    return new TeamEvent();
+    }else{
+       $error = "soon";
+    }
+    }
+    
+}
+class TeamEvent {
+   
+   public function setEnableDamage($bool = true){
+      if($bool = true){
+         
+      } else {
+         
+         }
+   }
+   
 }

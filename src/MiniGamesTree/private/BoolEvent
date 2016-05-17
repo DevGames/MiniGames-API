@@ -1,6 +1,5 @@
 <?php
-
-namespace MiniGamesTree\Private;
+namespace MiniGamesTree\private;
 
 class BoolEvent {
  

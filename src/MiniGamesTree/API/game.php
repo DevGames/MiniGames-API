@@ -18,7 +18,7 @@ class GameAPI {
     
     // private $use = array();
 
-    public function getTeam($teamname = "",$name_player){ # Like CTF
+    public function getTeam($teamname = "none",$name_player = "getPlayer.Name"){ # Like CTF
     $a = new \MiniGamesTree\Team($teamname,$name_player);
     return $a;
     }
@@ -33,7 +33,7 @@ class GameAPI {
     return $a;
     }
     
-    public function getSingles($name_player){ # Like SG
+    public function getSingles($name_player = "getPlayer.Name"){ # Like SG
     $a = new \MiniGamesTree\Singles($name_player);
     return $a;
     }
@@ -49,11 +49,12 @@ class GameAPI {
 }
 class TeamEvent {
    
-   public function setEnableDamage($bool = true){
+   public function setEnableDamage($bool = true , $main){
+      $main = \MiniGamesTree\privatee\BoolEvent();
       if($bool = true){
-         
+         $main->teamdamage = 0;
       } else {
-         
+         $main->teamdamage = 1;
          }
    }
    

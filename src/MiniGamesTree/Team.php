@@ -28,17 +28,31 @@ class Team {
      }
   
   public function getCount(){
-  return count($this->teams[strtolower($this->ust)]);
+    if($this->ust == ""){
+     return count($this->teams);
+         }else{
+      return count($this->teams[strtolower($this->ust)]);
+           }
      }
   
   public function isInTeam(){
+    if($this->ust == ""){
+  return in_array($this->usn, $this->teams);
+       } else {
   return in_array($this->usn, $this->teams[strtolower($this->ust)]);
+         }
     }
     
   public function getPlayers(\pocketmine\Server $server){
+    if($this->ust == ""){
+    foreach ($this->teams[$this->getPlayerTeam()] as $p):
+    return $server->getPlayer($p);
+    endforeach;
+    } else {
     foreach ($this->teams[strtolower($this->ust)] as $p):
     return $server->getPlayer($p);
     endforeach;
+       }
     }
     
   public function getScore(){
@@ -47,7 +61,10 @@ class Team {
     }
     
    public function listPlayers($glue = " .*. "){
-   return implode($glue, $this->teams[strtolower($this->ust)]);
-    }
+     if($this->ust == ""){
+   return implode($glue, $this->teams);
+    } else {
+   return join($glue, $this->teams[strtolower($this->ust)]);
+    }}
   
 }

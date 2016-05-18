@@ -17,9 +17,12 @@ class Eventt implements Listener {
     public function onDamage(Damage $event){
      if ($event instanceof EntityDamageByEntityEvent) {
             if ($event->getEntity() instanceof Player) {
+                $main = \MiniGamesTree\privatee\BoolEvent();
+                if($main->teamdamage == 1){
     if( $this->main->api->getGame()->getTeam("",$event->getEntity()->getName())->getTeam() == $this->main->api->getGame()->getTeam("",$event->getDamager()->getName())->getTeam() ) {
     $event->setCancelled(true);
       }
+                }
      }
     }
   }

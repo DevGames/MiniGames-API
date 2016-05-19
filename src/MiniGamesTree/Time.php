@@ -61,6 +61,14 @@ class Time extends \pocketmine\plugin\PluginBase {
       
   }
   
+  public function sendPopup($player,$msg = "none",$time = 2){
+  	$i = 0;
+  	do{
+  	$i++;
+  	$player->sendPopup($msg);
+  	} while ($i = $time * 100 / 2);
+  }
+  
   public function getMove(){
       return $this->move;
   }

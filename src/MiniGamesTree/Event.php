@@ -3,7 +3,7 @@ namespace MiniGamesTree; # Fixed
 use pocketmine\event\Listener; 
 use MiniGamesTree\Time as Main;
 use pocketmine\event\entity\EntityDamageEvent as Damage;
-class Eventt implements Listener {
+class Event implements Listener {
     private $main;
     
     public function __construct(Main $a) {

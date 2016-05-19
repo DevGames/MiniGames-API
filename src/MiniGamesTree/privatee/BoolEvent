@@ -1,9 +1,0 @@
-<?php
-
-namespace MiniGamesTree\privatee;
-
-class BoolEvent {
- 
-    public $teamdamage = 0;
-
-}

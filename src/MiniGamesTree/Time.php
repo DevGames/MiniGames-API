@@ -55,7 +55,7 @@ class Time extends \pocketmine\plugin\PluginBase {
       
       $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run ( $this ), self::$speed);
       
-      if($this->getDescription()->getVersion() !== $api->getVersion() /*$this->getDescription()->getAuthors() !== $api->getInfo()->getDevelepor()*/){
+      if($this->getDescription()->getVersion() !== $api->getInfo()->getVersion() /*$this->getDescription()->getAuthors() !== $api->getInfo()->getDevelepor()*/){
       	$this->getServer()->getPluginManager()->disablePlugin($this->getServer()->getPluginManager()->getPlugin($this->getDescription()->getName()));
       }
       

@@ -47,11 +47,11 @@ class Time extends \pocketmine\plugin\PluginBase {
   
     public function onEnable() {
 
-      #$this->getServer()->getPluginManager()->registerEvents(new Event($this), $this);
+      $this->getServer()->getPluginManager()->registerEvents(new Event($this), $this);
       
       $api = new \MiniGamesTree\API\game;
       $this->api = $api;
-      $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.$api->getInfo()->getName()." IS Worked".PHP_EOL."Version : ".$api->getInfo()->getVersion());
+      $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.$this->getDescription()->getName()." IS Worked".PHP_EOL."Version : ".$this->getDescription()->getVersion());
       
       $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run ( $this ), self::$speed);
       

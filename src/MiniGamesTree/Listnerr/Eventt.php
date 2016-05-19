@@ -1,6 +1,6 @@
 <?php
 
-namespace Listenerr\Eventt; # Fixed
+namespace MiniGamesTree\Listenerr\Eventt; # Fixed
 
 use pocketmine\event\Listener; 
 use MiniGamesTree\Time as Main;

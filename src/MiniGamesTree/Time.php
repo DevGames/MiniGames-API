@@ -47,7 +47,7 @@ class Time extends \pocketmine\plugin\PluginBase {
   
     public function onEnable() {
 
-      $this->getServer()->getPluginManager()->registerEvents(new Event($this), $this);
+      # $this->getServer()->getPluginManager()->registerEvents(new Event($this), $this);
       
       $api = new \MiniGamesTree\API\game;
       $this->api = $api;

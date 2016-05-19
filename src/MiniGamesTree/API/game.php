@@ -38,24 +38,4 @@ class GameAPI {
     return $a;
     }
     
-    public function getEvent($nameofevent){
-    if($nameofevent == "Team"){
-    return new TeamEvent();
-    }else{
-       $error = "soon";
-    }
-    }
-    
-}
-class TeamEvent {
-   
-   public function setEnableDamage($bool = true , $main){
-      $main = \MiniGamesTree\privatee\BoolEvent();
-      if($bool = true){
-         $main->teamdamage = 0;
-      } else {
-         $main->teamdamage = 1;
-         }
-   }
-   
 }

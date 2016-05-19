@@ -9,11 +9,15 @@ class TeamDamageEvent implements Cancellable{
     private $player;
     private $damager;
     private $bool;
+    private $tdn;
+    private $tpn;
     
-    public function __construct($player , $damager , $bool){
+    public function __construct($player , $dm , $bool , $tdn , $tpn){
         $this->player = $player;
-        $this->damager = $damager;
+        $this->damager = $dm;
         $this->bool = $bool;
+        $this->tdn = $tdn;
+        $this->tpn = $tpn;
     }
     
     public function getEntity(){
@@ -21,7 +25,7 @@ class TeamDamageEvent implements Cancellable{
     }
     
     public function getDamager(){
-        return $this->player;
+        return $this->damager;
     }
     
     public function setDamageEnabled($bool = true) {
@@ -30,5 +34,13 @@ class TeamDamageEvent implements Cancellable{
           }  else  {
             $this->bool = 1;
           }
+    }
+    
+    public function getDamagerTeam(){
+        return $this->tdn;
+    }
+    
+    public function getEntityTeam(){
+        return $this->tpn;
     }
 }

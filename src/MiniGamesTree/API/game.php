@@ -2,11 +2,7 @@
 
 namespace MiniGamesTree\API;
 
-class game {
-   
-    public static function getInfo(){
-    return new \MiniGamesTree\extendss\info();
-    }
+class game extends \MiniGamesTree\extendss\info(){
     
     public static function getGame(){
     $a = new GameAPI();

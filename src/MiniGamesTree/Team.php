@@ -14,8 +14,8 @@ class Team {
      }
   
   public function add(){
-  $this->get{$name} = $this->ust;
-  return $this->teams[strtolower($this->ust)][] = $name;
+  $this->get{$this->usn} = $this->ust;
+  return $this->teams[strtolower($this->ust)][] = $this->usn;
      }
   
   public function getPlayerTeam(){

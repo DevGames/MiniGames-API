@@ -1,6 +1,6 @@
 <?php
 
-namespace MiniGamesTree/GameEvent/Team;
+namespace MiniGamesTree\GameEvent\Team;
 
 use pocketmine\event\Cancellable;
 

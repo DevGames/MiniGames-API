@@ -19,12 +19,12 @@ class GameAPI {
     return $a;
     }
     
-    public static function getTime(){
+    public function getTime(){
     $a = new \MiniGamesTree\Time();
     return $a;
     }
     
-    public static function getMode(){
+    public  function getMode(){
     $a = new \MiniGamesTree\Status();
     return $a;
     }

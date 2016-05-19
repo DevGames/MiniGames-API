@@ -19,8 +19,4 @@ class info {
     public function getAPIName(){
         return self::$info{"pluginname"};
     }
-    
-    public function getInfo(array $key){
-        return self::$info{strtolower($key)};
-    }
 }

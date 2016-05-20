@@ -28,7 +28,7 @@ class GameAPI {
     return $a;
     }
     
-    public  function getMode(){
+    public function getMode(){
     $a = new \MiniGamesTree\Status();
     return $a;
     }

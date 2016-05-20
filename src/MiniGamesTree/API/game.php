@@ -9,7 +9,7 @@ class game extends \MiniGamesTree\extendss\info {
     return $a;
     }
     
-    public static function getInfo(){
+    public function getInfo(){
     return $this;
     }
     

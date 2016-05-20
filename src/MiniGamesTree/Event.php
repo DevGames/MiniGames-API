@@ -18,8 +18,8 @@ class Event implements Listener {
          
     if ($event->getEntity() instanceof Player) {
         
-    if( $this->main->api->getGame()->getTeam("",$event->getEntity()->getName())->getTeam() 
-    == $this->main->api->getGame()->getTeam("",$event->getDamager()->getName())->getTeam() ) {
+    if( $this->main->api->tst()->getTeam("",$event->getEntity()->getName())->getTeam() 
+    == $this->main->api->tst()->getTeam("",$event->getDamager()->getName())->getTeam() ) {
         
         if( $b == ( 0 ) ){
         

@@ -9,6 +9,11 @@ class game extends \MiniGamesTree\extendss\info {
     return $a;
     }
     
+    public function tst(){
+    $a = new GameAPI();
+    return $a;
+    }
+    
     public function getInfo(){
     return $this;
     }

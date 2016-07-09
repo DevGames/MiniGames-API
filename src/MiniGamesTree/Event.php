@@ -26,11 +26,10 @@ class Event implements Listener {
     $event->setCancelled(true);
     
      }
-     
-    $this->main->getServer()->getPluginManager()->callEvent(new MiniGamesTree\GameEvent\Team\TeamDamageEvent($event->getEntity(), $event->getDamager(), $b , $this->main->api->getGame()->getTeam("",$event->getDamager()->getName())->getTeam() , $this->main->api->getGame()->getTeam("",$event->getEntity()->getName())->getTeam()));
-    
     }
   }
+
+    $this->main->getServer()->getPluginManager()->callEvent(new MiniGamesTree\GameEvent\Team\TeamDamageEvent($event->getEntity(), $event->getDamager(), $b , $this->main->api->getGame()->getTeam("",$event->getDamager()->getName())->getTeam() , $this->main->api->getGame()->getTeam("",$event->getEntity()->getName())->getTeam()));
 }
     
 }

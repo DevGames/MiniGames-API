@@ -45,7 +45,26 @@ class Time extends \pocketmine\plugin\PluginBase {
     }
   }
   
-    public function onEnable() {
+  /*
+  public function sendPopup($player,$msg = "none",$time = 2){
+  	$i = 0;
+  	do{
+  	$i++;
+  	$player->sendPopup($msg);
+  	} while ($i = $time * 100 / 2);
+  }
+   * 
+   */
+  
+  public function getMove(){
+      return $this->move;
+  }
+  
+  public function getSpeed(){
+      return self::$speed;
+  }
+  
+  public function onEnable() {
 
       $this->getServer()->getPluginManager()->registerEvents(new Event($this), $this);
       
@@ -61,21 +80,6 @@ class Time extends \pocketmine\plugin\PluginBase {
       
   }
   
-  public function sendPopup($player,$msg = "none",$time = 2){
-  	$i = 0;
-  	do{
-  	$i++;
-  	$player->sendPopup($msg);
-  	} while ($i = $time * 100 / 2);
-  }
-  
-  public function getMove(){
-      return $this->move;
-  }
-  
-  public function getSpeed(){
-      return self::$speed;
-  }
 }
 class Run extends PluginTask{
 

@@ -14,7 +14,7 @@ class TeamScore extends \MiniGamesTree\Team{
         return $this->score[strtolower($this->ust)];
     }
     
-    public function DisableScore($teamname){
+    public function DisableScore(){
        unset($this->score[$this->ust]);
     }
 

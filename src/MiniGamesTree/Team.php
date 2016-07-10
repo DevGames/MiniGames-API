@@ -24,7 +24,7 @@ class Team {
   
   public function remove(){
   unset($this->get[$this->usn]);
-  unset($this->teams[array_search($this->usn, $this->teams[strtolower($this->ust]))]);
+  unset($this->teams[array_search($this->usn, $this->teams[strtolower($this->ust)])]);
      }
   
   public function getCount(){

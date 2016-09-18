@@ -3,8 +3,9 @@
 namespace MiniGamesTree\GameEvent\Team;
 
 use pocketmine\event\Cancellable;
+use pocketmine\event\Event;
 
-class TeamDamageEvent implements Cancellable{
+class TeamDamageEvent extends Event implements Cancellable{
 
     private $player;
     private $damager;

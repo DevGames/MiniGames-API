@@ -74,10 +74,10 @@ class Time extends \pocketmine\plugin\PluginBase {
       
       $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run ( $this ), self::$speed);
       
-      /*if($this->getDescription()->getVersion() !== $api->getInfo()->getVersion() || $this->getDescription()->getAuthors() !== $api->getInfo()->getDevelepor()){
+      if($this->getDescription()->getVersion() !== $api->getInfo("version")->getInfo() || $this->getDescription()->getAuthors()[0] !== $api->getInfo("name")->getInfo()){
       	$this->getServer()->getPluginManager()->disablePlugin($this->getServer()->getPluginManager()->getPlugin($this->getDescription()->getName()));
       }
-      */
+      
       
   }
   

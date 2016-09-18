@@ -4,7 +4,7 @@ namespace MiniGamesTree;
 
 class Status {
     
-    public $status = array("Step" <= "stop");
+    public $status = array();
     
     public function setStarting(){
         return $this->status{"Step"} = "start";

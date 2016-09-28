@@ -16,8 +16,12 @@ class Time extends \pocketmine\plugin\PluginBase {
   
   private $moveperiod = 1;
 
-  public function getTime(){
+  public function getSec(){
     return $this->Time;
+  }
+	
+  public function getMinute(){
+    return !is_float($this->Time) ?: round($this->Time / 60);
   }
   
   public function getMovePeriod(){

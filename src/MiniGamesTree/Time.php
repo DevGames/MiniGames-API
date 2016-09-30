@@ -37,7 +37,7 @@ class Time extends \pocketmine\plugin\PluginBase {
   }
   
   public function setSpeed($amount){
-    return self::$speed = $amount * (1);
+    return self::$speed = $amount * (2);
   }
   
   public function setTimeMove($move = "-"){

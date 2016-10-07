@@ -12,7 +12,7 @@ class Time extends \pocketmine\plugin\PluginBase {
   
   private static $speed = 20;
   
-  private $move = "-";
+  private $move = "+";
   
   private $moveperiod = 1;
 
@@ -97,10 +97,10 @@ class Run extends PluginTask{
 	
 	public function onRun($currentTick){
            if($this->run->getMove() == "-"){
-           $this->run->setTime($this->run->getTime() - $this->run->getMovePeriod());
+           $this->run->setTime($this->run->getSec() - $this->run->getMovePeriod());
            }
            if($this->run->getMove() == "+"){
-           $this->run->setTime($this->run->getTime() + $this->run->getMovePeriod());
+           $this->run->setTime($this->run->getSec() + $this->run->getMovePeriod());
            }
         }
 }
